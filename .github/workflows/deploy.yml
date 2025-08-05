@@ -11,7 +11,7 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
         with:
-          fetch-depth: 0  # важно для деплоя
+          fetch-depth: 0
 
       - name: Install dependencies
         run: npm install
@@ -20,7 +20,8 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.3.6
+        uses: JamesIves/github-pages-deploy-action@v4.1.0
+
         with:
           branch: gh-pages
           folder: dist
